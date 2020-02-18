@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Cabin', sans-serif;
+  color: #333;
+  background: #0050a2;
+  padding: 0 16px;
+}
+
+#app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 460px;
+}
+
+#song-details {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#song-details p.title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+#song-details p.album {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#controls button {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+#controls button:hover {
+  color: #0050a2;
+}
+
+#controls button:not(:last-child) {
+  margin-right: 16px;
+}
+
+#seek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#seek .time {
+  font-size: 14px;
+  width: 50px;
+  text-align: right;
+}
+
+#seek .time:last-of-type {
+  text-align: left;
+}
+
+#seek .seek-bar {
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+#seek .seek-bar .track {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  background: #d3d3d3;
+  height: 2px;
+  width: 100%;
+}
+
+#seek .seek-bar .progress {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  background: #006bda;
+  height: 2px;
+  width: 0%;
+}
+
+#seek .seek-bar .slider-btn {
+  position: absolute;
+  top: 3px;
+  left: calc(0% - 6px);
+  background: #fff;
+  height: 13px;
+  width: 13px;
+  border: 1.5px solid #006bda;
+  border-radius: 100%;
+}
